@@ -1,0 +1,29 @@
+{
+  "name": "pgmail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "reset": "mongo pgmail --eval \"db.dropDatabase();\"",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "mail": "node mailer.js",
+    "scrape": "node scraper.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.596.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "mongoose": "^5.8.3",
+    "nodemailer": "^6.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
