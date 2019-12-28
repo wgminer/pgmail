@@ -23,6 +23,10 @@
     "mongoose": "^5.8.3",
     "nodemailer": "^6.4.2"
   },
+  "engines": {
+    "node": ">= 6.9.4",
+    "npm": ">= 4.4.0"
+  },
   "devDependencies": {
     "nodemon": "^2.0.2"
   }
