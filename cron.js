@@ -49,9 +49,9 @@ mongoose.Promise = global.Promise;
   let { title, html } = shuffle(unsentEssays)[0];
 
   await mailer.send({
-    from: "amazonses.com",
+    from: "PG Mail <no-reply@williamminer.com>",
     to: email,
-    subject: `Paul Graham: ${title}`,
+    subject: title,
     html
   });
   console.log("Sent: " + title);

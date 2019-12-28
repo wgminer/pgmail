@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer");
 const AWS = require("aws-sdk");
-AWS.config.update({});
 
 const transporter = nodemailer.createTransport({
   SES: new AWS.SES({
