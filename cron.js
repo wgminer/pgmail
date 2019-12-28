@@ -48,12 +48,20 @@ mongoose.Promise = global.Promise;
 
   let { title, html } = shuffle(unsentEssays)[0];
 
+  // Fix relative URLs
+  html = html.replace(
+    /href="((?!http).+\.html)"/g,
+    'href="http://www.paulgraham.com/$1"'
+  );
+
   await mailer.send({
     from: "PG Mail <no-reply@williamminer.com>",
     to: email,
     subject: title,
     html
   });
+
   console.log("Sent: " + title);
+
   process.exit(0);
 })();
